@@ -4,8 +4,8 @@ In this Codecademy's project, I've to implement some of the functionality from t
 
 ## Implement
 
-- [ ] _.clamp()
-- [ ] _.inRange()
+- [x] _.clamp()
+- [x] _.inRange()
 - [ ] _.words()
 - [ ] _.pad()
 - [ ] _.has()
