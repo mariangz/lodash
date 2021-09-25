@@ -6,7 +6,7 @@ In this Codecademy's project, I've to implement some of the functionality from t
 
 - [x] _.clamp()
 - [x] _.inRange()
-- [ ] _.words()
+- [x] _.words()
 - [ ] _.pad()
 - [ ] _.has()
 - [ ] _.invert()
