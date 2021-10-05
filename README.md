@@ -1,6 +1,6 @@
 # Lodash
 
-In this Codecademy's project, I've to implement some of the functionality from the widely-popular [lodash.js](https://lodash.com) library which provides many methods that add new functionality for numbers, strings, objects, and arrays.
+In this Codecademy's project, I've to implement some of the functionality from the widely-popular [lodash.js](https://lodash.com) library which provides many methods that add new functionality for numbers, strings, objects, and arrays. the tests were provided by Codecademy.
 
 ## Implement
 
