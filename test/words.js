@@ -12,15 +12,39 @@ if (!_.words) {
   return;
 }
 
-assert.equals(TEST_NAME, 'Returns an array', '_.words("hi ho")', Object.prototype.toString.call(_.words("hi ho")), '[object Array]');
+assert.equals(
+  TEST_NAME,
+  'Returns an array',
+  '_.words("hi ho")',
+  Object.prototype.toString.call(_.words('hi ho')),
+  '[object Array]'
+);
 
-if (Object.prototype.toString.call(_.words("hi ho")) !== '[object Array]') {
+if (Object.prototype.toString.call(_.words('hi ho')) !== '[object Array]') {
   assert.terminateTestBlock();
   return;
 }
 
-assert.arrayEquals(TEST_NAME, 'Returns an array of words from a string with one word', '_.words("hi")', _.words("hi"), ["hi"]);
-assert.arrayEquals(TEST_NAME, 'Returns an array of words from a string with two words', '_.words("hi there")', _.words("hi there"), ["hi", "there"]);
-assert.arrayEquals(TEST_NAME, 'Returns an array of words from a string with three words', '_.words("hi there you")', _.words("hi there you"), ["hi", "there", "you"]);
+assert.arrayEquals(
+  TEST_NAME,
+  'Returns an array of words from a string with one word',
+  '_.words("hi")',
+  _.words('hi'),
+  ['hi']
+);
+assert.arrayEquals(
+  TEST_NAME,
+  'Returns an array of words from a string with two words',
+  '_.words("hi there")',
+  _.words('hi there'),
+  ['hi', 'there']
+);
+assert.arrayEquals(
+  TEST_NAME,
+  'Returns an array of words from a string with three words',
+  '_.words("hi there you")',
+  _.words('hi there you'),
+  ['hi', 'there', 'you']
+);
 
 assert.endTestBlock();

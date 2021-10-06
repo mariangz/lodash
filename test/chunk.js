@@ -12,14 +12,37 @@ if (!_.chunk) {
   return;
 }
 
-assert.equals(TEST_NAME, 'Returns an array', '_.chunk([1, 2, 3, 4], 2)', Object.prototype.toString.call(_.chunk([1, 2, 3, 4], 2)), '[object Array]');
+assert.equals(
+  TEST_NAME,
+  'Returns an array',
+  '_.chunk([1, 2, 3, 4], 2)',
+  Object.prototype.toString.call(_.chunk([1, 2, 3, 4], 2)),
+  '[object Array]'
+);
 
-if (Object.prototype.toString.call(_.chunk([1, 2, 3, 4], 2)) !== '[object Array]') {
+if (
+  Object.prototype.toString.call(_.chunk([1, 2, 3, 4], 2)) !== '[object Array]'
+) {
   assert.terminateTestBlock();
   return;
 }
 
-assert.arrayEquals(TEST_NAME, 'Chunks evenly-divided arrays', '_.chunk([1, 2, 3, 4], 2)', _.chunk([1, 2, 3, 4], 2), [[1, 2], [3, 4]]);
-assert.arrayEquals(TEST_NAME, 'Chunks unevenly-divided arrays', '_.chunk([1, 2, 3, 4, 5], 2)', _.chunk([1, 2, 3, 4, 5], 2), [[1, 2], [3, 4], [5]]);
+assert.arrayEquals(
+  TEST_NAME,
+  'Chunks evenly-divided arrays',
+  '_.chunk([1, 2, 3, 4], 2)',
+  _.chunk([1, 2, 3, 4], 2),
+  [
+    [1, 2],
+    [3, 4],
+  ]
+);
+assert.arrayEquals(
+  TEST_NAME,
+  'Chunks unevenly-divided arrays',
+  '_.chunk([1, 2, 3, 4, 5], 2)',
+  _.chunk([1, 2, 3, 4, 5], 2),
+  [[1, 2], [3, 4], [5]]
+);
 
 assert.endTestBlock();

@@ -12,6 +12,18 @@ const _ = {
     const clampedValue = Math.min(lowerClampedValue, upperBound);
     return clampedValue;
   },
+
+  inRange(number, startValue, endValue) {
+    if (endValue === undefined) {
+      endValue = startValue;
+      startValue = 0;
+    } else if (startValue > endValue) {
+      startValue = startValue + endValue;
+      endValue = startValue - endValue;
+      startValue = endValue - startValue;
+    }
+    return number >= startValue && number < endValue;
+  },
 };
 
 // Do not write or modify code below this line.

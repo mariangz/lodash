@@ -14,13 +14,31 @@ if (!_.dropWhile) {
 
 const indexIsSmallerThanElement = (element, index) => index < element;
 
-assert.equals(TEST_NAME, 'Returns an array', '_.dropWhile([1, 2, 0, 4], indexIsSmallerThanElement)', Object.prototype.toString.call(_.dropWhile([1, 2, 0, 4], indexIsSmallerThanElement)), '[object Array]');
+assert.equals(
+  TEST_NAME,
+  'Returns an array',
+  '_.dropWhile([1, 2, 0, 4], indexIsSmallerThanElement)',
+  Object.prototype.toString.call(
+    _.dropWhile([1, 2, 0, 4], indexIsSmallerThanElement)
+  ),
+  '[object Array]'
+);
 
-if (Object.prototype.toString.call(_.dropWhile([1, 2, 0, 4], indexIsSmallerThanElement)) !== '[object Array]') {
+if (
+  Object.prototype.toString.call(
+    _.dropWhile([1, 2, 0, 4], indexIsSmallerThanElement)
+  ) !== '[object Array]'
+) {
   assert.terminateTestBlock();
   return;
 }
 
-assert.arrayEquals(TEST_NAME, 'Drops elements until predicate function returns falsy', "_.dropWhile([1, 2, 0, 4], indexIsSmallerThanElement", _.dropWhile([1, 2, 0, 4], indexIsSmallerThanElement), [0, 4]);
+assert.arrayEquals(
+  TEST_NAME,
+  'Drops elements until predicate function returns falsy',
+  '_.dropWhile([1, 2, 0, 4], indexIsSmallerThanElement',
+  _.dropWhile([1, 2, 0, 4], indexIsSmallerThanElement),
+  [0, 4]
+);
 
 assert.endTestBlock();

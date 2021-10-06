@@ -12,6 +12,12 @@ if (!_) {
   return;
 }
 
-assert.equals(TEST_NAME, 'The value of _ is an object', '_', Object.prototype.toString.call(_), '[object Object]');
+assert.equals(
+  TEST_NAME,
+  'The value of _ is an object',
+  '_',
+  Object.prototype.toString.call(_),
+  '[object Object]'
+);
 
 assert.endTestBlock();

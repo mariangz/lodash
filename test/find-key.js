@@ -12,8 +12,20 @@ if (!_.findKey) {
   return;
 }
 
-const startsWithV = string => string.startsWith('v');
-assert.equals(TEST_NAME, 'Returns the corresponding key of a value that returns truthy from the predicate function', '_.findKey({"key": "value"}, startsWithV)', _.findKey({"key": "value"}, startsWithV), "key");
-assert.equals(TEST_NAME, 'Returns undefined if an object has no values that return truthy from the predicate function', '_.findKey({"key": "notValue"}, startsWithV)', _.findKey({"key": "notValue"}, startsWithV), undefined);
+const startsWithV = (string) => string.startsWith('v');
+assert.equals(
+  TEST_NAME,
+  'Returns the corresponding key of a value that returns truthy from the predicate function',
+  '_.findKey({"key": "value"}, startsWithV)',
+  _.findKey({ key: 'value' }, startsWithV),
+  'key'
+);
+assert.equals(
+  TEST_NAME,
+  'Returns undefined if an object has no values that return truthy from the predicate function',
+  '_.findKey({"key": "notValue"}, startsWithV)',
+  _.findKey({ key: 'notValue' }, startsWithV),
+  undefined
+);
 
 assert.endTestBlock();

@@ -12,7 +12,19 @@ if (!_.invert) {
   return;
 }
 
-assert.equals(TEST_NAME, 'Returns an object with all keys and values inverted', '_.invert({originalKey: "originalValue"})["originalValue"])', _.invert({originalKey: "originalValue"})['originalValue'], 'originalKey');
-assert.equals(TEST_NAME, 'Returns an object with all keys and values inverted', '_.invert({originalKey: "originalValue"})["originalKey"])', _.invert({originalKey: "originalValue"})['originalKey'], undefined);
+assert.equals(
+  TEST_NAME,
+  'Returns an object with all keys and values inverted',
+  '_.invert({originalKey: "originalValue"})["originalValue"])',
+  _.invert({ originalKey: 'originalValue' })['originalValue'],
+  'originalKey'
+);
+assert.equals(
+  TEST_NAME,
+  'Returns an object with all keys and values inverted',
+  '_.invert({originalKey: "originalValue"})["originalKey"])',
+  _.invert({ originalKey: 'originalValue' })['originalKey'],
+  undefined
+);
 
 assert.endTestBlock();
