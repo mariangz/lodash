@@ -42,6 +42,11 @@ const _ = {
       )}`;
     }
   },
+
+  has(object, key) {
+    const keys = Object.keys(object);
+    return keys.includes(key);
+  },
 };
 
 // Do not write or modify code below this line.
