@@ -47,6 +47,14 @@ const _ = {
     const keys = Object.keys(object);
     return keys.includes(key);
   },
+
+  invert(object) {
+    const invertObject = {};
+    for (let key in object) {
+      invertObject[object[key]] = key;
+      return invertObject;
+    }
+  },
 };
 
 // Do not write or modify code below this line.
