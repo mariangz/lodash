@@ -28,6 +28,20 @@ const _ = {
   words(string) {
     return string.split(' ');
   },
+
+  pad(string, length) {
+    if (string.length >= length) {
+      return string;
+    } else {
+      const padLength = length - string.length;
+      const padStartLength = Math.floor(padLength / 2);
+      const padEndLength = Math.ceil(padLength / 2);
+      const pad = ' ';
+      return `${pad.repeat(padStartLength)}${string}${pad.repeat(
+        padEndLength
+      )}`;
+    }
+  },
 };
 
 // Do not write or modify code below this line.
