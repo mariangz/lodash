@@ -14,7 +14,7 @@ if (!_.clamp) {
 
 assert.equals(
   TEST_NAME,
-  'Returns in-range values unmodified',
+  'Returns in-range values unclamped',
   '_.clamp(2, 1, 3)',
   _.clamp(2, 1, 3),
   2

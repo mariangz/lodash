@@ -14,20 +14,6 @@ if (!_.inRange) {
 
 assert.equals(
   TEST_NAME,
-  'Uses end value as start value and start value as 0 if end value is not defined',
-  '_.inRange(1, 2)',
-  _.inRange(1, 2),
-  true
-);
-assert.equals(
-  TEST_NAME,
-  'Reverses start and end values if start is bigger than end',
-  '_.inRange(3, 4, 2)',
-  _.inRange(3, 4, 2),
-  true
-);
-assert.equals(
-  TEST_NAME,
   'Returns true if an in-range value is in range',
   '_.inRange(2, 1, 3)',
   _.inRange(2, 1, 3),
@@ -46,6 +32,20 @@ assert.equals(
   '_.inRange(4, 1, 3)',
   _.inRange(4, 1, 3),
   false
+);
+assert.equals(
+  TEST_NAME,
+  'Uses end value as start value and start value as 0 if end value is not defined',
+  '_.inRange(1, 2)',
+  _.inRange(1, 2),
+  true
+);
+assert.equals(
+  TEST_NAME,
+  'Reverses start and end values if start is bigger than end',
+  '_.inRange(3, 4, 2)',
+  _.inRange(3, 4, 2),
+  true
 );
 assert.equals(
   TEST_NAME,

@@ -14,17 +14,26 @@ if (!_.invert) {
 
 assert.equals(
   TEST_NAME,
-  'Returns an object with all keys and values inverted',
+  'Returns an object with key and value inverted for a single key-value pair',
   '_.invert({originalKey: "originalValue"})["originalValue"])',
   _.invert({ originalKey: 'originalValue' })['originalValue'],
   'originalKey'
 );
 assert.equals(
   TEST_NAME,
-  'Returns an object with all keys and values inverted',
+  'Original key is not present after the key-value pairs have been inverted',
   '_.invert({originalKey: "originalValue"})["originalKey"])',
   _.invert({ originalKey: 'originalValue' })['originalKey'],
   undefined
+);
+assert.equals(
+  TEST_NAME,
+  'Returns an object with all keys and values inverted',
+  '_.invert({originalKey: "originalValue"})["originalKey"])',
+  _.invert({ originalKey: 'originalValue', anotherKey: 'anotherValue' })[
+    'anotherValue'
+  ],
+  'anotherKey'
 );
 
 assert.endTestBlock();
