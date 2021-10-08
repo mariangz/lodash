@@ -49,11 +49,12 @@ const _ = {
   },
 
   invert(object) {
-    const invertObject = {};
+    let invertedObject = {};
     for (let key in object) {
-      invertObject[object[key]] = key;
-      return invertObject;
+      let originalValue = object[key];
+      invertedObject[originalValue] = key;
     }
+    return invertedObject;
   },
 
   findKey(object, predicate) {
