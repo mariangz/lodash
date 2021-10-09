@@ -66,7 +66,10 @@ const _ = {
     return undefined;
   },
 
-  drop(array, number) {},
+  drop(array, number) {
+    number = number ?? 1;
+    return array.splice(number);
+  },
 };
 
 // Do not write or modify code below this line.
