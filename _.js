@@ -70,6 +70,14 @@ const _ = {
     number = number ?? 1;
     return array.splice(number);
   },
+
+  dropWhile(array, predicate) {
+    const dropNumber = array.findIndex(
+      (element, index) => !predicate(element, index, array)
+    );
+    const droppedArray = this.drop(array, dropNumber);
+    return droppedArray;
+  },
 };
 
 // Do not write or modify code below this line.
