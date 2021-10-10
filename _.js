@@ -78,6 +78,17 @@ const _ = {
     const droppedArray = this.drop(array, dropNumber);
     return droppedArray;
   },
+
+  chunk(array, size) {
+    let newArray = [];
+    size = size ?? 1;
+    while (array.length > size) {
+      let chunk = array.splice(0, size);
+      newArray.push(chunk);
+    }
+    newArray.push(array);
+    return newArray;
+  },
 };
 
 // Do not write or modify code below this line.
